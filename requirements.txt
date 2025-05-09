@@ -5,5 +5,3 @@ scikit-learn
 pandas<2
 statsmodels
 seaborn
-plotly
-nbformat>=4.2.0
