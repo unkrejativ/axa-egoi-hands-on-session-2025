@@ -1,7 +1,31 @@
-# GitHub Codespaces ♥️ Jupyter Notebooks
+# 🚀 Hands-On Session: Train Your Model & Optimize Your Gini Score! 
 
-Welcome to your shiny new codespace! We've got everything fired up and running for you to explore Python and Jupyter notebooks.
+Welcome to the Hands on Session of AXA Insurance Group at EGOI. Here, you’ll dive into the world of machine learning by training your very own model and optimizing its Gini score.💪
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with what you're seeing right now - where you go from here is up to you!
+## 📖 Our Storyline
+Picture this: You and your team at AXA are on a mission to support our data scientists and actuaries in the field of car insurance! 🚗
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+Your goal is to help predict whether a claim at a car will occur or not. 
+By doing this, you and your Co-data scientists will empower our experts to make more informed decisions about our risks and pricing strategies.
+
+This is not just any training session—it's a **Challenge**!✨ 
+You will be competing against other teams to see who can develop the best model.
+
+
+## 🛠️ First things first: Setting Up the Environment
+Let’s get your environment ready to rock! Follow these steps:
+
+1. **Clone the Repository**:  
+   Open your terminal (or command prompt) and run:  
+   ```bash
+   git clone https://github.com/yourusername/your-repository-name.git
+
+
+## 🏆 Training the Model and try to optimize the Gini Score
+Now the fun begins! After understanding the data bases try to find the best model by asking yourself which information will have the biggest impact on a car claim. 
+
+Discuss with your team which predictors you would like to use and change or add them to the code. 
+
+Hint: A model with all possible predictors will not lead to the best Gini 😉
+
+Which team will have the model with the best Gini-Score?
