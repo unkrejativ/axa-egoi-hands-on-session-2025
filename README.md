@@ -15,10 +15,6 @@ You will be competing against other teams to see who can develop the best model.
 ## 🛠️ First things first: Setting Up the Environment
 Let’s get your environment ready to rock! Follow these steps:
 
-1. **Clone the Repository**:  
-   Open your terminal (or command prompt) and run:  
-   ```bash
-   git clone https://github.com/yourusername/your-repository-name.git
 
 
 ## 🏆 Training the Model and try to optimize the Gini Score
