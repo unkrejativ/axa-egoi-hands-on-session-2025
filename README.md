@@ -1,4 +1,4 @@
-# 🚀 Hands-On Session: Train Your Model & Optimize Your Gini Score! 
+# 🚀 Crash Course: Building Models to Predict Car Claim Occurrence! 
 
 Welcome to the Hands on Session of AXA Insurance Group at EGOI. Here, you’ll dive into the world of machine learning by training your very own model and optimizing its Gini score.💪
 
