@@ -12,6 +12,7 @@ insurance_claims_freq=pd.read_csv(url_old)
 insurance_claims_freq.head()
 
 #%%
+# taken from Heiko's solution
 insurance_claims_freq = insurance_claims_freq[insurance_claims_freq["Exposure"] <= 1.1]
 insurance_claims_freq["Exposure"] = np.minimum( insurance_claims_freq["Exposure"], 1 )  
 
@@ -27,33 +28,30 @@ def random_birthdate_from_age(age):
     
     return min_date + timedelta(days=random_days)
 
-# def generate_unique_birthdates(df, age_col, max_tries=10):
-#     result = []
-#     seen_rows = set()
-
-#     for i, row in df.iterrows():
-#         for _ in range(max_tries):
-#             birthdate = random_birthdate_from_age(row[age_col])
-#             reduced_row = row.drop(labels=["Exposure"])
-            
-#             # Neue Zeile mit BirthDate
-#             reduced_row_with_date = tuple(reduced_row.tolist() + [birthdate])
-#             if reduced_row_with_date not in seen_rows:
-#                 seen_rows.add(reduced_row_with_date)
-#                 result.append(birthdate)
-#                 break
-#         else:
-#             raise ValueError(f"Could not find a unique date for {i} after {max_tries} retries.")
-    
-#     return result
 
 #%%
+# Calculate Birth date
 sub = [col for col in insurance_claims_freq.columns if col != 'IDpol']
 unique_rows = insurance_claims_freq.drop_duplicates(subset=sub).copy()
+unique_rows['DriverBirthDate'] = unique_rows["DrivAge"].apply(random_birthdate_from_age)
+
 
 #%%
-#unique_rows['DriverBirthDate'] = generate_unique_birthdates(unique_rows, 'DrivAge')
-unique_rows['DriverBirthDate'] = unique_rows["DrivAge"].apply(random_birthdate_from_age)
+
+# repeat to calculate birth date for duplicates/collisions
+compare_cols = [col for col in unique_rows.columns if col != "IDpol" and col != "Exposure"]
+
+max_tries = 10
+tries = 0
+
+while unique_rows.duplicated(subset=compare_cols).any() and tries < max_tries:
+    dupes = unique_rows[unique_rows.duplicated(subset=compare_cols, keep='first')].index
+    unique_rows.loc[dupes, "DriverBirthDate"] = unique_rows.loc[dupes, "DrivAge"].apply(random_birthdate_from_age)
+    tries += 1
+
+if unique_rows.duplicated(subset=compare_cols).any():
+    raise ValueError("Still duplicates left")
+
 
 #%%
 ssub = sub + ['DriverBirthDate']
@@ -63,6 +61,10 @@ insurance_claims_freq = insurance_claims_freq.merge(unique_rows[ssub], on=sub, h
 insurance_claims_freq = insurance_claims_freq.drop(columns=["Exposure", "DrivAge"])
 insurance_claims_freq.head()
 
+#%%
+# for testing:
+# should be 648919 rows left
+# insurance_claims_freq.drop_duplicates(subset=[col for col in insurance_claims_freq.columns if col != 'IDpol' and col != 'Exposure'])
 #%%
 # Write insurance_claims_freq
 insurance_claims_freq.to_csv(url_new, index=False)
