@@ -12,6 +12,10 @@ insurance_claims_freq=pd.read_csv(url_old)
 insurance_claims_freq.head()
 
 #%%
+#a=insurance_claims_freq[insurance_claims_freq["Exposure"] > 1.1]
+#a[a["ClaimNb"] > 0]["IDpol"].unique() 22
+#%%
+
 # taken from Heiko's solution
 insurance_claims_freq = insurance_claims_freq[insurance_claims_freq["Exposure"] <= 1.1]
 insurance_claims_freq["Exposure"] = np.minimum( insurance_claims_freq["Exposure"], 1 )  
