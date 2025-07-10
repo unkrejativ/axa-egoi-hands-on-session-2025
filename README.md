@@ -17,9 +17,12 @@ Together, you will find out what affects the level of car damage, how to visuali
 **Hints**: During the Challenge our *Modelling-Sis* <img src="https://github.com/unkrejativ/axa-egoi-hands-on-session-2025/blob/setup-devspaces/modelling_sis.png" width="40"/> will provide some Hints for you, if needed.
 
 
-## 🛠️ First things first: Setting Up the Environment
+## 🛠️ Setting Up the Environment
 
 **Notice**: If you already had a GitHub Account and provided some payment information, please inform us.
+
+
+
 
 
 ## 📊 1) Data Overview and Manipulation
@@ -52,6 +55,14 @@ We will messure quality of the model with the Mean Squared Error (MSE). Try to g
 <p>Please don't hesitate to ask us at any time or have a look in the FAQ or hints that <em>Modelling-Sis</em> <img src="https://github.com/unkrejativ/axa-egoi-hands-on-session-2025/blob/setup-devspaces/modelling_sis.png" width="30"/> will give you.</p>
 </details>
 <br>
+
+<details>
+<summary><em>Why do I need a coding environment?</em> <span role="img" aria-label="faq"></span></summary>
+<br>
+<p>An coding environment is important because it allows us to use pre-written functions we need for our projects, so we don't have to write these functions by ourself. These functions are collected in packages and an environment contains several packages. 
+
+Two of the most important packages are pandas, which helps us manipulate and analyze data, and scikit-learn (sklearn), which provides tools for modeling and machine learning.</p>
+</details>
 <details>
 <summary><em>What is a model?</em> <span role="img" aria-label="faq"></span></summary>
 <br>
