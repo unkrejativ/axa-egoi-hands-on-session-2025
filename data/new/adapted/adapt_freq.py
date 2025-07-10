@@ -68,7 +68,15 @@ insurance_claims_freq.head()
 #%%
 # for testing:
 # should be 648919 rows left
-# insurance_claims_freq.drop_duplicates(subset=[col for col in insurance_claims_freq.columns if col != 'IDpol' and col != 'Exposure'])
+insurance_claims_freq.drop_duplicates(subset=[col for col in insurance_claims_freq.columns if col != 'IDpol' and col != 'Exposure'])
+
+#%%
+insurance_claims_freq.loc[(insurance_claims_freq['Area'] == 'B') & (insurance_claims_freq['Density'] == 50), 'Area'] = 'A'
+insurance_claims_freq.loc[(insurance_claims_freq['Area'] == 'C') & (insurance_claims_freq['Density'] == 100), 'Area'] = 'B'
+insurance_claims_freq.loc[(insurance_claims_freq['Area'] == 'D') & (insurance_claims_freq['Density'] == 500), 'Area'] = 'C'
+#%%
+insurance_claims_freq.loc[(insurance_claims_freq['IDpol'] == 4158255), 'ClaimNb'] = 1
+
 #%%
 # Write insurance_claims_freq
 insurance_claims_freq.to_csv(url_new, index=False)
