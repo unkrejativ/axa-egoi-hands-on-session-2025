@@ -21,22 +21,51 @@ Together, you will find out what affects the level of car damage, how to visuali
 
 **Notice**: If you already had a GitHub Account and provided some payment information, please inform us.
 
-1) Search for the repository **https://github.com/unkrejativ/axa-egoi-hands-on-session-2025** and open it.
+<details>
+<summary><em>1. Step: </em> <span role="img" aria-label="faq"></span></summary>
+<br>
+Search for the repository <strong>https://github.com/unkrejativ/axa-egoi-hands-on-session-2025</strong> and open it.
 
-2) Select "Code",
+</details>
+
+<details>
+<summary><em>2. Step: </em> <span role="img" aria-label="faq"></span></summary>
+<br>
+Select <strong>Code</strong>:
+<br>
+<br>
 <img src="https://github.com/unkrejativ/axa-egoi-hands-on-session-2025/blob/setup-devspaces/env_1.jpg" width="600"/>
-
-click on "Codespaces" and the "+" under "Codespaces":
+   
+<br>
+<br>
+click on <strong>Codespaces</strong> and the <strong>+</strong> under <strong>Codespaces</strong>:
+<br>
+<br>
 
 <img src="https://github.com/unkrejativ/axa-egoi-hands-on-session-2025/blob/setup-devspaces/env_2.jpg" width="600"/>
+</details>
 
-3) Now you created a new Codespace in a new Window and will see: 
 
+<details>
+<summary><em>3. Step: </em> <span role="img" aria-label="faq"></span></summary>
+<br>
+Now you created a new <strong>Codespaces</strong> in a new Window and will see: 
+<br>
+<br>
 <img src="https://github.com/unkrejativ/axa-egoi-hands-on-session-2025/blob/setup-devspaces/env_3.jpg" width="600"/>
+<br>
+<br>
+Wait until the Codespace is configured, this will take around <strong>5 Minutes</strong>.
 
-Wait until the Codespace is configured, this will take around 5 Minutes.
+</details>
 
-4) Bild wenn es fertig ist + neues Terminal?
+<details>
+<summary><em>4. Step: </em> <span role="img" aria-label="faq"></span></summary>
+<br>
+
+Bild wenn es fertig ist + neues Terminal?
+
+</details>
 
 ## 📊 1) Data Overview and Manipulation
 
