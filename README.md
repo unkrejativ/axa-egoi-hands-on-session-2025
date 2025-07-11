@@ -21,8 +21,7 @@ Together, you will find out what affects the level of car damage, how to visuali
 
 **Notice**: If you already had a GitHub Account and provided some payment information, please inform us.
 
-
-
+1) Search for the repository **https://github.com/unkrejativ/axa-egoi-hands-on-session-2025** and open it.
 
 
 ## 📊 1) Data Overview and Manipulation
