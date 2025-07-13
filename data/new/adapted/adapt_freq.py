@@ -18,7 +18,15 @@ insurance_claims_freq.head()
 
 # taken from Heiko's solution
 insurance_claims_freq = insurance_claims_freq[insurance_claims_freq["Exposure"] <= 1.1]
-insurance_claims_freq["Exposure"] = np.minimum( insurance_claims_freq["Exposure"], 1 )  
+insurance_claims_freq["Exposure"] = np.minimum( insurance_claims_freq["Exposure"], 1 )
+
+#%%
+# All rows with Driver's age >=99 shall be changed to a value 1-15 randomly
+mask = insurance_claims_freq['DrivAge'] >= 99
+random_ages = np.random.randint(5, 16, size=mask.sum())
+
+# Werte ersetzen
+insurance_claims_freq.loc[mask, 'DrivAge'] = random_ages
 
 #%%
 def random_birthdate_from_age(age):
@@ -62,7 +70,7 @@ ssub = sub + ['DriverBirthDate']
 insurance_claims_freq = insurance_claims_freq.merge(unique_rows[ssub], on=sub, how='left')
 
 #%%
-insurance_claims_freq = insurance_claims_freq.drop(columns=["Exposure", "DrivAge"])
+insurance_claims_freq = insurance_claims_freq.drop(columns=["Exposure"])
 insurance_claims_freq.head()
 
 #%%
@@ -75,8 +83,12 @@ insurance_claims_freq.loc[(insurance_claims_freq['Area'] == 'B') & (insurance_cl
 insurance_claims_freq.loc[(insurance_claims_freq['Area'] == 'C') & (insurance_claims_freq['Density'] == 100), 'Area'] = 'B'
 insurance_claims_freq.loc[(insurance_claims_freq['Area'] == 'D') & (insurance_claims_freq['Density'] == 500), 'Area'] = 'C'
 #%%
+#correct one row
 insurance_claims_freq.loc[(insurance_claims_freq['IDpol'] == 4158255), 'ClaimNb'] = 1
 
+#%%
+# Correct data type
+insurance_claims_freq["IDpol"] = insurance_claims_freq["IDpol"].astype(int)
 #%%
 # Write insurance_claims_freq
 insurance_claims_freq.to_csv(url_new, index=False)
