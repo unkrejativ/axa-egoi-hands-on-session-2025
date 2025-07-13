@@ -105,6 +105,7 @@ We will messure quality of the model with the Mean Squared Error (MSE). Try to g
 
 Two of the most important packages are pandas, which helps us manipulate and analyze data, and scikit-learn (sklearn), which provides tools for modeling and machine learning.</p>
 </details>
+
 <details>
 <summary><em>What is a model?</em> <span role="img" aria-label="faq"></span></summary>
 <br>
@@ -115,6 +116,13 @@ By analyzing past data, we can see how factors like speed or vehicle power affec
 When we now apply the model, which has been trained on known old data, to new data, we can make predictions about the future. ✨
 
 In insurance, Generalized Linear Models (GLMs) are a common concept used for making predictions.</p>
+</details>
+
+<details>
+<summary><em>Whhy do I have to split the data in train and test data?</em> <span role="img" aria-label="faq"></span></summary>
+<br>
+<p>...
+</p>
 </details>
 
 <details>
