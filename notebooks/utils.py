@@ -3,7 +3,7 @@ import matplotlib.ticker as ticker
 import seaborn as sns
 import pandas as pd
 
-def calculate_age_from_birthdate(date_series):
+def calculate_age_from_birthdate(date_series: pd.Series) -> pd.Series:
     """
     Calculates the age in years for reference date 2025-07-16 for a pandas series with birth dates.
     
@@ -24,7 +24,7 @@ def calculate_age_from_birthdate(date_series):
     
     return age.astype(int)
 
-def scatter_plot(df, x, y):
+def plot_scatter(df: pd.DataFrame, x: str, y: str) -> None:
     """
     Creates a scatter plot for the given DataFrame columns.
     Parameters:
