@@ -1,62 +1,50 @@
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 import seaborn as sns
 import pandas as pd
 
-def generate_dynamic_sum_dict(keys):
+def calculate_age_from_birthdate(date_series):
     """
-    Generates a dictionary with specified keys and sum as values.
-
-    Parameters
-    ----------
-    keys : list
-        List of keys for the dictionary.
-
-    Returns
-    -------
-    dict
-        A dictionary with keys from the input list and dynamic values.
+    Calculates the age in years for reference date 2025-07-16 for a pandas series with birth dates.
+    
+    Parameters:
+    - date_series: pd.Series in datetime64[ns]
+    
+    Returns:
+    - pd.Series age in years
     """
+    reference_date = pd.Timestamp('2025-07-16')
+    birth_dates = pd.to_datetime(date_series)
+    
+    # Check if the birthday has not yet occurred this year
+    not_had_birthday = ( (birth_dates.dt.month > reference_date.month) | 
+                         ((birth_dates.dt.month == reference_date.month) & (birth_dates.dt.day > reference_date.day)) )
+    
+    age = reference_date.year - birth_dates.dt.year - not_had_birthday.astype(int)
+    
+    return age.astype(int)
 
-    values = [sum for i in range(len(keys))]
-    dynamic_dict = {}
-    for i in range(len(keys)):
-        dynamic_dict[keys[i]] = values[i]
-    return dynamic_dict
-
-
-def plot_dimension(columns, dimension, data):
+def scatter_plot(df, x, y):
     """
-    Plots the relationship between the specified columns and a given dimension from the provided data.
-
-    Parameters
-    ----------
-    columns : list
-        List of column names to be plotted against the dimension.
-    dimension : str
-        The dimension (e.g., category or group) to be used for plotting.
-    data : pandas.DataFrame
-        The input DataFrame containing the data to be plotted.
-
-    Returns
-    -------
-    None
+    Creates a scatter plot for the given DataFrame columns.
+    Parameters:
+    df (pandas.DataFrame): The DataFrame containing the data.
+    x (str): The column name to be used for the x-axis.
+    y (str): The column name to be used for the y-axis.
+    Returns:
+    None: Displays the scatter plot.
+    Notes:
+    - The x-axis and y-axis are labeled with the respective column names.
+    - The y-axis is configured to display integer values only.
     """
-    data['Exposure']=1
-    temp = data.groupby(by=[dimension]).agg(
-        {** generate_dynamic_sum_dict(columns) , "Exposure": sum }
-    ).reset_index()
-
-    for column in columns:
-        temp[column + '_per_exposure'] = temp[column] / temp['Exposure']
-    temp['Rank'] = temp[dimension].rank(method='dense') - 1
-
-    fig, ax1 = plt.subplots(figsize=(20, 10))
-    sns.barplot(x=dimension, y='Exposure', data=temp,
-                estimator=sum, order=sorted(data[dimension].unique()), alpha=0.3, ax=ax1, errorbar=None)
-    ax2 = ax1.twinx()
-    for column in columns:
-        sns.lineplot(x='Rank', y=column + '_per_exposure', data=temp,
-                        label=column + '_per_exposure', ax=ax2, marker='o')
+    
+    plt.scatter(df[x], df[y])
+    plt.xlabel(x)
+    plt.ylabel(y)
+    plt.title(f'{x} vs. {y}')
+    plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
+    plt.gca().xaxis.set_major_locator(ticker.MultipleLocator(10))
+    plt.show()
 
 
 
