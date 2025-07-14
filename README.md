@@ -77,6 +77,8 @@ Like our data scientist at AXA you will experience that the received is not clea
 
 In this section you will prepare your dataset so it can be used for the second part, the modelling part.
 
+Link zum Notebook:
+
 
 ## 🏆 2) Model Training
 
