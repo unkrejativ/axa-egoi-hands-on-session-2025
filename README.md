@@ -94,6 +94,12 @@ We will messure quality of the model with the Mean Squared Error (MSE). Try to g
 
 Path to the Notebook: notebooks/2_modelling.ipynb
 
+## Ratings 
+
+--> kurz das Rating-System erklären, sie selbst sollen die Punkte addieren und uns zum Schluss nennen 
+--> Aufkleber für jedes Team 
+--> Tabelle der einzelnen Teams erstellen und Feld lassen für die Endpunkte, die wir zum schluss eintragen
+
 ## ❓ FAQ
 <details>
 <summary><em>What if we have a question or are stuck during the challenge?</em> <span role="img" aria-label="faq"></span></summary>
