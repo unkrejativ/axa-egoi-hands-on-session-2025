@@ -119,10 +119,9 @@ In insurance, Generalized Linear Models (GLMs) are a common concept used for mak
 </details>
 
 <details>
-<summary><em>Whhy do I have to split the data in train and test data?</em> <span role="img" aria-label="faq"></span></summary>
+<summary><em>Why do I have to split the data in train and test data?</em> <span role="img" aria-label="faq"></span></summary>
 <br>
-<p>...
-</p>
+The training data is used to train the model, allowing it to learn the patterns and relationships in the data. On the other side the test data is used to evaluate how well the model performs on unseen data, ensuring it can generalize beyond the training set.
 </details>
 
 <details>
@@ -134,12 +133,25 @@ Mathematically, the MSE is the mean of the squared differences between the predi
 </details>
 
 <details>
+<summary><em>How to read the model formula?</em> <span role="img" aria-label="faq"></span></summary>
+<br>
+<p>...
+</p>
+</details>
+
+<details>
 <summary><em>Why is a model with all variables not the best?</em> <span role="img" aria-label="faq"></span></summary>
 <br>
 <p>...
 </p>
 </details>
 
+<details>
+<summary><em>What are residuals?</em> <span role="img" aria-label="faq"></span></summary>
+<br>
+<p>...
+</p>
+</details>
 
 
 
