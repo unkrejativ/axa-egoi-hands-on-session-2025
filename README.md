@@ -99,6 +99,20 @@ Path to the Notebook: *notebooks/2_modelling.ipynb*
 --> kurz das Rating-System erklären, sie selbst sollen die Punkte addieren und uns zum Schluss nennen 
 --> Aufkleber für jedes Team 
 --> Tabelle der einzelnen Teams erstellen und Feld lassen für die Endpunkte, die wir zum schluss eintragen
+| Team | Points |
+|------------|-------|
+| ⭐ 1 |  |
+| 👽 2 |  |
+| 😺 3 |  |
+| ❄️ 4 |  |
+| ☀️ 5 |  |
+| 💥 6 |  |
+| 🐝 7 |  |
+| 🍀 8 |  |
+| 🌼 9 |  |
+| 🎡 10|  |
+| 🚗 11|  |
+| 🎭 12|  |
 
 ## ❓ FAQ
 <details>
