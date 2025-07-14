@@ -14,7 +14,7 @@ The team with the best performing model will be declared the winner!
 
 Together, you will find out what affects the level of car damage, how to visualize your results effectively, and learn about the work of our data scientists at AXA.
 
-**Hints**: During the Challenge our *Modelling-Sis* <img src="https://github.com/unkrejativ/axa-egoi-hands-on-session-2025/blob/setup-devspaces/modelling_sis.png" width="40"/> will provide some Hints for you, if needed.
+**Hints**: During the Challenge our *Modelling-Sis* <img src="images/modelling_sis.png" width="40"/> will provide some Hints for you, if needed.
 
 
 ## 🛠️ Setting Up the Environment
@@ -34,7 +34,7 @@ Search for the repository <strong>https://github.com/unkrejativ/axa-egoi-hands-o
 Select <strong>Code</strong>:
 <br>
 <br>
-<img src="https://github.com/unkrejativ/axa-egoi-hands-on-session-2025/blob/setup-devspaces/env_1.jpg" width="600"/>
+<img src="images/env_1.jpg" width="600"/>
    
 <br>
 <br>
@@ -42,7 +42,7 @@ click on <strong>Codespaces</strong> and the <strong>+</strong> under <strong>Co
 <br>
 <br>
 
-<img src="https://github.com/unkrejativ/axa-egoi-hands-on-session-2025/blob/setup-devspaces/env_2.jpg" width="600"/>
+<img src="images/env_2.jpg" width="600"/>
 </details>
 
 
@@ -52,7 +52,7 @@ click on <strong>Codespaces</strong> and the <strong>+</strong> under <strong>Co
 Now you created a new <strong>Codespaces</strong> in a new Window and will see: 
 <br>
 <br>
-<img src="https://github.com/unkrejativ/axa-egoi-hands-on-session-2025/blob/setup-devspaces/env_3.jpg" width="600"/>
+<img src="images/env_3.jpg" width="600"/>
 <br>
 <br>
 Wait until the Codespace is configured, this will take around <strong>5 Minutes</strong>.
@@ -77,7 +77,7 @@ Like our data scientist at AXA you will experience that the received is not clea
 
 In this section you will prepare your dataset so it can be used for the second part, the modelling part.
 
-Link zum Notebook:
+Path to the Notebook: notebooks/1_data_preparation.ipynb
 
 
 ## 🏆 2) Model Training
@@ -88,15 +88,17 @@ After understanding the data try to find the best model by asking yourself which
 
 Discuss with your team which predictors you would like to use and change or add them to the code. You can try several different models, just copy the received code and change the model formula. 
 
-<img src="https://github.com/unkrejativ/axa-egoi-hands-on-session-2025/blob/setup-devspaces/modelling_sis.png" width="40"/> **Hint**: A model with all possible variables will not lead to the best model.
+<img src="images/modelling_sis.png" width="40"/> **Hint**: A model with all possible variables will not lead to the best model.
 
 We will messure quality of the model with the Mean Squared Error (MSE). Try to get the **least** Mean Squared Error possible!
+
+Path to the Notebook: notebooks/2_modelling.ipynb
 
 ## ❓ FAQ
 <details>
 <summary><em>What if we have a question or are stuck during the challenge?</em> <span role="img" aria-label="faq"></span></summary>
 <br>
-<p>Please don't hesitate to ask us at any time or have a look in the FAQ or hints that <em>Modelling-Sis</em> <img src="https://github.com/unkrejativ/axa-egoi-hands-on-session-2025/blob/setup-devspaces/modelling_sis.png" width="30"/> will give you.</p>
+<p>Please don't hesitate to ask us at any time or have a look in the FAQ or hints that <em>Modelling-Sis</em> <img src="images/modelling_sis.png" width="30"/> will give you.</p>
 </details>
 <br>
 
