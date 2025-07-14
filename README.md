@@ -49,7 +49,7 @@ click on <strong>Codespaces</strong> and the <strong>+</strong> under <strong>Co
 <details>
 <summary><em>3. Step: </em> <span role="img" aria-label="faq"></span></summary>
 <br>
-Now you created a new <strong>Codespaces</strong> in a new Window and will see: 
+Now you created a new <strong>Codespace</strong> in a new Window and will see: 
 <br>
 <br>
 <img src="images/env_3.jpg" width="600"/>
@@ -73,26 +73,26 @@ First you should get an overview of the preserved data.
 
 After this you should understand which variables are contained in our dataset and even have a first idea which variables you would like to use for modelling.
 
-Like our data scientist at AXA you will experience that the received is not clean or prepared for modelling. 
+Like our data scientist at AXA you will experience that the received data is not clean or prepared for modelling. 
 
 In this section you will prepare your dataset so it can be used for the second part, the modelling part.
 
-Path to the Notebook: notebooks/1_data_preparation.ipynb
+Path to the Notebook: *notebooks/1_data_preparation.ipynb*
 
 
 ## 🏆 2) Model Training
 
 Now the modelling begins! 
 
-After understanding the data try to find the best model by asking yourself which information will have the biggest impact on the high of a car damage. 
+After understanding the data try to find the best model by asking yourself which information will have the biggest impact on the amount of a car damage. 
 
 Discuss with your team which predictors you would like to use and change or add them to the code. You can try several different models, just copy the received code and change the model formula. 
 
 <img src="images/modelling_sis.png" width="40"/> **Hint**: A model with all possible variables will not lead to the best model.
 
-We will messure quality of the model with the Mean Squared Error (MSE). Try to get the **least** Mean Squared Error possible!
+We will messure the quality of the model with the Mean Squared Error (MSE). Try to get the **least** Mean Squared Error possible!
 
-Path to the Notebook: notebooks/2_modelling.ipynb
+Path to the Notebook: *notebooks/2_modelling.ipynb*
 
 ## Ratings 
 
