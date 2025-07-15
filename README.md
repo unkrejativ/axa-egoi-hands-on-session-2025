@@ -94,11 +94,20 @@ We will messure the quality of the model with the Mean Squared Error (MSE). Try 
 
 Path to the Notebook: *notebooks/2_modelling.ipynb*
 
-## Ratings 
+## Rating Procedure
+<details>
+<summary>1. Sign in to this Mentimeter poll: <span role="img" aria-label="faq"></span></summary>
+<br>
+<p>
+   <img src="images/menti.jpg" width="600"/>
+</p>
+</details>
 
---> kurz das Rating-System erklären, sie selbst sollen die Punkte addieren und uns zum Schluss nennen 
---> Aufkleber für jedes Team 
---> Tabelle der einzelnen Teams erstellen und Feld lassen für die Endpunkte, die wir zum schluss eintragen
+2) Count your points for section 1, send us your team number and your points on Menti.
+3) Count your points for section 2, send us your lowest MSE and the variables of the formula you used in your best model on Mentimeter.
+4) We will count all points and announce the winner. 🎉
+
+
 | Team | Points |
 |------------|-------|
 | ⭐ 1 |  |
