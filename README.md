@@ -89,9 +89,9 @@ Path to the Notebook: *notebooks/1_data_preparation.ipynb*
 
 Now the modelling begins! 
 
-After understanding the data try to find the best model by asking yourself which information will have the biggest impact on the amount of a car damage. 
+After understanding the data try to find the best model for ClaimAmount by asking yourself which information will have the biggest impact on the amount of a car damage. 
 
-Discuss with your team which predictors you would like to use and change or add them to the code. You can try several different models, just copy the received code and change the model formula. 
+Discuss with your team which features you would like to use and change or add them to the code. You can try several different models, just copy the received code and change the model formula. 
 
 <img src="images/modelling_sis.png" width="40"/> **Hint**: A model with all possible variables will not lead to the best model.
 
