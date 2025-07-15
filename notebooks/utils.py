@@ -6,6 +6,7 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from sklearn.metrics import mean_squared_error
 from IPython.display import display, HTML
+import numpy as np
 
 def calculate_age_from_birthdate(date_series: pd.Series) -> pd.Series:
     """
@@ -96,7 +97,7 @@ def plot_scatter_and_residuals(df: pd.DataFrame, objective_col: str, prediction_
 
     
     axes[0].set_xlim(-300, 10000)
-    axes[0].set_ylim(-50, 3000)
+    axes[0].set_ylim(-50, 4000)
     axes[0].set_aspect('auto')  
     axes[0].tick_params(labelsize=12)  
 
@@ -108,7 +109,7 @@ def plot_scatter_and_residuals(df: pd.DataFrame, objective_col: str, prediction_
     sns.scatterplot(x=df[prediction_col], y=residuals, color='darkorange', alpha=0.6, edgecolor='k', s=100, ax=axes[1])
     axes[1].axhline(y=0, color='red', linestyle='--', lw=2)
     axes[1].set_xlabel(prediction_col, fontsize=14)
-    axes[1].set_ylabel('Residuals: ClaimAmount- Prediction_of_ClaimAmount', fontsize=14)
+    axes[1].set_ylabel('ClaimAmount- Prediction_of_ClaimAmount', fontsize=14)
     axes[1].set_title('Residual Plot', fontsize=18, fontweight='bold', color='darkorange')
 
     axes[1].grid(True)
@@ -164,7 +165,7 @@ def add_model_to_overview(models_overview: pd.DataFrame, formula: str, mse: floa
     return models_overview
 
 
-def train_evaluate_and_visualize_model(train: pd.DataFrame, test: pd.DataFrame, formula: str, models_overview: pd.DataFrame)-> pd.DataFrame:
+def train_evaluate_and_visualize_model(train: pd.DataFrame, test: pd.DataFrame, formula: str, models_overview: pd.DataFrame, summary = False)-> pd.DataFrame:
 
     model = smf.glm(formula, data=train, family=sm.families.Gamma(link=sm.families.links.Log())) 
     results = model.fit()
@@ -194,5 +195,6 @@ def train_evaluate_and_visualize_model(train: pd.DataFrame, test: pd.DataFrame, 
     print()
     print()
     plot_scatter_and_residuals(test, "ClaimAmount", "prediction")
-
+    if summary: 
+        print(results.summary())
     return models_overview

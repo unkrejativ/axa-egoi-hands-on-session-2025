@@ -157,7 +157,7 @@ Mathematically, the MSE is the mean of the squared differences between the predi
 </details>
 
 <details>
-<summary><em>How to read the model formula?</em> <span role="img" aria-label="faq"></span></summary>
+<summary><em>How to read the model formula and what are non linear extensions?</em> <span role="img" aria-label="faq"></span></summary>
 <br>
 <p>...
 </p>
