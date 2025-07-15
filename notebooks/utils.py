@@ -2,6 +2,10 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import seaborn as sns
 import pandas as pd
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+from sklearn.metrics import mean_squared_error
+from IPython.display import display, HTML
 
 def calculate_age_from_birthdate(date_series):
     """
@@ -83,11 +87,11 @@ def plot_scatter_and_residuals(df: pd.DataFrame, objective_col: str, prediction_
     sns.scatterplot(x=df[objective_col], y=df[prediction_col], alpha=0.6, edgecolor='k', s=100, ax=axes[0])
     axes[0].set_xlabel(objective_col, fontsize=14)
     axes[0].set_ylabel(prediction_col, fontsize=14)
-    axes[0].set_title(f'Scatterplot of {objective_col} vs {prediction_col}', fontsize=18, fontweight='bold', color='navy')
+    axes[0].set_title(f'Scatterplot of {objective_col} vs {prediction_col} of {objective_col}', fontsize=18, fontweight='bold', color='navy')
 
     # Add a line for reference
     axes[0].plot([df[objective_col].min(), df[objective_col].max()], 
-                 [df[prediction_col].min(), df[prediction_col].max()], 
+                 [df[objective_col].min(), df[objective_col].max()], 
                  'k--', lw=2)
 
     
@@ -104,7 +108,7 @@ def plot_scatter_and_residuals(df: pd.DataFrame, objective_col: str, prediction_
     sns.scatterplot(x=df[prediction_col], y=residuals, color='darkorange', alpha=0.6, edgecolor='k', s=100, ax=axes[1])
     axes[1].axhline(y=0, color='red', linestyle='--', lw=2)
     axes[1].set_xlabel(prediction_col, fontsize=14)
-    axes[1].set_ylabel('Residuals', fontsize=14)
+    axes[1].set_ylabel('Residuals: ClaimAmount- Prediction_of_ClaimAmount', fontsize=14)
     axes[1].set_title('Residual Plot', fontsize=18, fontweight='bold', color='darkorange')
 
     axes[1].grid(True)
@@ -157,4 +161,38 @@ def add_model_to_overview(models_overview: pd.DataFrame, formula: str, mse: floa
 
     # Optionally wrap the formula text for better display
     
+    return models_overview
+
+
+def train_evaluate_and_visualize_model(train: pd.DataFrame, test: pd.DataFrame, formula: str, models_overview: pd.DataFrame)-> pd.DataFrame:
+
+    model = smf.glm(formula, data=train, family=sm.families.Gamma(link=sm.families.links.Log())) 
+    results = model.fit()
+
+    #predict
+
+    test["prediction"] = results.predict(test)
+
+
+    #evaluate
+    mse = mean_squared_error(test["ClaimAmount"], test["prediction"])
+
+    print("=" * 50)  
+    print("                 MODEL PERFORMANCE                 ")  
+    print("=" * 50)  
+    print(f"Mean Squared Error (MSE): {mse:.2f}")  
+    print("=" * 50)
+
+    print()
+    print()
+
+    models_overview = add_model_to_overview(models_overview, formula=formula, mse=mse)
+
+    display(HTML(models_overview.to_html(escape=False, index=False)))
+
+    #visualisation
+    print()
+    print()
+    plot_scatter_and_residuals(test, "ClaimAmount", "prediction")
+
     return models_overview
