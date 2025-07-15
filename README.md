@@ -1,7 +1,12 @@
 # 🚀 Crash Course: Building Models to Predict Car Claim Occurrence! 
 
-Welcome to the Hands on Session of AXA Insurance Group at EGOI. 
+Welcome to the Hands on Session of AXA Insurance Group at EGOI 2025. 
 
+The AXA Insurance Group is one of the largest insurance companies in the world, providing several services like health insurance, car insurance and even insurances for companies to its customers.
+
+Sonja & Reja, both Data Scientist at AXA, will guide you through this Coding Challenge. ⭐
+
+## 📖 Overview
 In this challenge you will collaborate in teams to build a predictive model that determines how high a car damage claim will be, if it might occure.
 
 Your goal is to use your Python coding skills to:
