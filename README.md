@@ -14,7 +14,7 @@ Sonja & Reja, data engineer and data scientist at AXA, will guide you through th
 
 
 ## 📖 Overview
-In this challenge you will collaborate in teams to build a predictive model that determines how high a car damage claim will be, if it might occur.
+In this challenge you will collaborate in **teams** to build a predictive model that determines how high a car damage claim will be, if it might occur.
 
 Your goal is to use your Python coding skills to:
 1) analyze and manipulate the data
@@ -37,9 +37,10 @@ Together, you will find out what affects the level of car damage, how to visuali
 </p>
 </details>
 
-2) Count your points for section 1, send us your team number and your points on Mentimeter.
-3) Count your points for section 2, send us your lowest MSE and the variables of the formula you used in your best model on Mentimeter.
-4) We will count all points and announce the winner. 🎉
+2) Count your points for section 1, send us your team number and your points on Mentimeter. You can get **✨ 10 points** in total for this section.
+3) Send us your team number, your lowest MSE and the variables of the formula you used in your best model on Mentimeter.
+   The points for the best, second best and third best team in this section are: **✨ 10 points**, **8 points** and **6 points**. All other teams will get **✨ 4 points**
+5) We will count all points and announce the winner. 🎉
 
 
 | Team | Points |
