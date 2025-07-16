@@ -1,10 +1,10 @@
 # 🚀 Crash Course: Building Models to Predict Car Claim Occurrence! 
 
-Welcome to the Hands on Session of AXA Insurance Group at EGOI 2025. 
+Welcome to the hands-on session of AXA Insurance Group at EGOI 2025. 
 
-The AXA Insurance Group is one of the largest insurance companies in the world, providing several services like health insurance, car insurance and even insurances for companies to its customers.
+The AXA Insurance Group is one of the largest insurance companies in the world, providing several services such as health insurance, car insurance and even insurances for companies to its customers.
 
-Sonja & Reja, Data Engineer and Data Scientist at AXA, will guide you through this Coding Challenge. ⭐
+Sonja & Reja, data engineer and data scientist at AXA, will guide you through this Coding Challenge. ⭐
 
 💼 Follow us on LinkedIn: 
 
@@ -14,11 +14,11 @@ Sonja & Reja, Data Engineer and Data Scientist at AXA, will guide you through th
 
 
 ## 📖 Overview
-In this challenge you will collaborate in teams to build a predictive model that determines how high a car damage claim will be, if it might occure.
+In this challenge you will collaborate in teams to build a predictive model that determines how high a car damage claim will be, if it might occur.
 
 Your goal is to use your Python coding skills to:
-1) Analyze and manipulate the data
-2) Build the most effective model possible
+1) analyze and manipulate the data
+2) build the most effective model possible
    
 via GitHub Codespaces.
 
@@ -37,7 +37,7 @@ Together, you will find out what affects the level of car damage, how to visuali
 </p>
 </details>
 
-2) Count your points for section 1, send us your team number and your points on Menti.
+2) Count your points for section 1, send us your team number and your points on Mentimeter.
 3) Count your points for section 2, send us your lowest MSE and the variables of the formula you used in your best model on Mentimeter.
 4) We will count all points and announce the winner. 🎉
 
@@ -131,7 +131,7 @@ Discuss with your team which features you would like to use and change or add th
 
 <img src="images/modelling_sis.png" width="40"/> **Hint**: A model with all possible variables will not lead to the best model.
 
-We will messure the quality of the model with the Mean Squared Error (MSE). Try to get the **least** Mean Squared Error possible!
+We will measure the quality of the model using the Mean Squared Error (MSE). Try to get the **lowest** Mean Squared Error possible!
 
 Path to the Notebook: *notebooks/2_modelling.ipynb*
 
@@ -197,7 +197,7 @@ results = model.fit()
 <summary><em>How to read the model formula and what are non linear extensions?</em> <span role="img" aria-label="faq"></span></summary>
 <br>
 <p> 
-The model formula shows how the target variable (like ClaimAmount) depends on other variables (called predictors). For example, ClaimAmount ~ variable1 + variable2 means that ClaimAmount is predicted based on variable1 and variable2.
+The model formula shows how the variable we want to predict (like ClaimAmount) depends on other variables (called predictors). For example, ClaimAmount ~ variable1 + variable2 means that ClaimAmount is predicted based on variable1 and variable2.
 
 In a simple linear model, we assume that the relationship between the one single predictor and ClaimAmount is a straight line: *ClaimAmount = c + a* * *variable1 + b* * *variable2*
 For example, if variable1 increases by 1 unit, ClaimAmount is expected to increase or decrease by a fixed amount (the coefficient a). This means the effect of variable1 on ClaimAmount is constant, no matter the value of variable1 or other variables.
