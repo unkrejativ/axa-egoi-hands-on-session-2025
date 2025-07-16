@@ -1,20 +1,63 @@
 # 🚀 Crash Course: Building Models to Predict Car Claim Occurrence! 
 
-Welcome to the Hands on Session of AXA Insurance Group at EGOI. 
+Welcome to the hands-on session of AXA Insurance Group at EGOI 2025. 
 
-In this challenge you will collaborate in teams to build a predictive model that determines how high a car damage claim will be, if it might occure.
+The AXA Insurance Group is one of the largest insurance companies in the world, providing several services such as health insurance, car insurance and even insurances for companies to its customers.
+
+Sonja & Reja, data engineer and data scientist at AXA, will guide you through this Coding Challenge. ⭐
+
+💼 Follow us on LinkedIn: 
+
+[🔗 Sonja ](https://www.linkedin.com/in/sonja-pins-456836b4/?originalSubdomain=de)
+
+[🔗 Reja ](https://www.linkedin.com/in/reja-ladwig-8090141a5/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=de)
+
+
+## 📖 Overview
+In this challenge you will collaborate in **teams** to build a predictive model that determines how high a car damage claim will be, if it might occur.
 
 Your goal is to use your Python coding skills to:
-1) Analyze and manipulate the data
-2) Build the most effective model possible
+1) analyze and manipulate the data
+2) build the most effective model possible
    
 via GitHub Codespaces.
 
-The team with the best performing model will be declared the winner!
+During the challenge you can collect points, the team with the most points will be declared the winner!
 
 Together, you will find out what affects the level of car damage, how to visualize your results effectively, and learn about the work of our data scientists at AXA.
 
 **Hints**: During the Challenge our *Modelling-Sis* <img src="images/modelling_sis.png" width="40"/> will provide some Hints for you, if needed.
+
+## Rating Procedure
+After we presented the results for the first section:
+<details>
+<summary>1. Sign in to this Mentimeter poll: <span role="img" aria-label="faq"></span></summary>
+<br>
+<p>
+   <img src="images/menti.jpg" width="600"/>
+</p>
+</details>
+
+2) Count your points for section 1, send us your team number and your points on Mentimeter. You can get **✨ 10 points** in total for this section.
+3) Send us your team number, your lowest MSE and the variables of the formula you used in your best model on Mentimeter.
+   The points for the best, second best and third best team in this section are: **✨ 10 points**, **8 points** and **6 points**. All other teams will get **✨ 4 points**
+5) We will count all points and announce the winner. 🎉
+
+
+| Team | Points |
+|------------|-------|
+| ⭐ 1 |  |
+| 👽 2 |  |
+| 😺 3 |  |
+| ❄️ 4 |  |
+| ☀️ 5 |  |
+| 💥 6 |  |
+| 🐝 7 |  |
+| 🍀 8 |  |
+| 🌼 9 |  |
+| 🎡 10|  |
+| 🚗 11|  |
+| 🎭 12|  |
 
 
 ## 🛠️ Setting Up the Environment
@@ -84,35 +127,15 @@ Path to the Notebook: *notebooks/1_data_preparation.ipynb*
 
 Now the modelling begins! 
 
-After understanding the data try to find the best model by asking yourself which information will have the biggest impact on the amount of a car damage. 
+After understanding the data try to find the best model for ClaimAmount by asking yourself which information will have the biggest impact on the amount of a car damage. 
 
-Discuss with your team which predictors you would like to use and change or add them to the code. You can try several different models, just copy the received code and change the model formula. 
+Discuss with your team which features you would like to use and change or add them to the code. You can try several different models, just copy the received code and change the model formula. 
 
 <img src="images/modelling_sis.png" width="40"/> **Hint**: A model with all possible variables will not lead to the best model.
 
-We will messure the quality of the model with the Mean Squared Error (MSE). Try to get the **least** Mean Squared Error possible!
+We will measure the quality of the model using the Mean Squared Error (MSE). Try to get the **lowest** Mean Squared Error possible!
 
 Path to the Notebook: *notebooks/2_modelling.ipynb*
-
-## Ratings 
-
---> kurz das Rating-System erklären, sie selbst sollen die Punkte addieren und uns zum Schluss nennen 
---> Aufkleber für jedes Team 
---> Tabelle der einzelnen Teams erstellen und Feld lassen für die Endpunkte, die wir zum schluss eintragen
-| Team | Points |
-|------------|-------|
-| ⭐ 1 |  |
-| 👽 2 |  |
-| 😺 3 |  |
-| ❄️ 4 |  |
-| ☀️ 5 |  |
-| 💥 6 |  |
-| 🐝 7 |  |
-| 🍀 8 |  |
-| 🌼 9 |  |
-| 🎡 10|  |
-| 🚗 11|  |
-| 🎭 12|  |
 
 ## ❓ FAQ
 <details>
@@ -139,6 +162,8 @@ By analyzing past data, we can see how factors like speed or vehicle power affec
 
 When we now apply the model, which has been trained on known old data, to new data, we can make predictions about the future. ✨
 
+The easist model is a simple linear regression with Y = c + a*X, where Y is the variable to predict and X is the predictor. This model has only one predictor but you can extend it to any amount of variables.
+
 In insurance, Generalized Linear Models (GLMs) are a common concept used for making predictions.</p>
 </details>
 
@@ -157,23 +182,51 @@ Mathematically, the MSE is the mean of the squared differences between the predi
 </details>
 
 <details>
+<summary><em>What function is used to train the model?</em> <span role="img" aria-label="faq"></span></summary>
+<br>
+<p> The function <em>train_evaluate_and_visualize_model</em> is used for fitting a model (estimating the coefficients of a model), visualization and capturing the created models to get an overview. 
+
+For model fitting it uses the package statsmodels and formulates a glm and fits it:
+
+model = smf.glm(formula, data=train, family=sm.families.Gamma(link=sm.families.links.Log()))
+
+results = model.fit()
+
+</p>
+</details>
+
+<details>
 <summary><em>How to read the model formula and what are non linear extensions?</em> <span role="img" aria-label="faq"></span></summary>
 <br>
-<p>...
+<p> 
+The model formula shows how the variable we want to predict (like ClaimAmount) depends on other variables (called predictors). For example, ClaimAmount ~ variable1 + variable2 means that ClaimAmount is predicted based on variable1 and variable2.
+
+In a simple linear model, we assume that the relationship between the one single predictor and ClaimAmount is a straight line: *ClaimAmount = c + a* * *variable1 + b* * *variable2*
+For example, if variable1 increases by 1 unit, ClaimAmount is expected to increase or decrease by a fixed amount (the coefficient a). This means the effect of variable1 on ClaimAmount is constant, no matter the value of variable1 or other variables.
+
+But, real-world data can be more complex, with relationships that aren't straight lines. To capture these more complicated patterns, we can extend the model in different ways:
+
+**Adding powers (like variable1^2)**: This allows the relationship to curve, so the effect of variable1 on ClaimAmount can change at different levels. This extension is useful with continuous variables (numeric data that can take any value, like age).
+
+**Using functions like np.exp() or np.log()**: log(variable1) is useful when the effect gets smaller as the value gets bigger, like with income or age. The exp (exponential) function is used when things grow very fast, like populations or money. Both are mainly used with numbers, not categories like region.
+
+**Interactions (like variable1 * variable2)**: This models the combined effect of two variables, where the effect of one variable depends on the level of another. Interactions are typically used with continuous variables, but they can also be applied to categorical variables (like region or VehBrand). For example, the effect of age (continuous) might differ depending on the VehBrand or VehPower.
 </p>
 </details>
 
 <details>
 <summary><em>Why is a model with all variables not the best?</em> <span role="img" aria-label="faq"></span></summary>
 <br>
-<p>...
+<p>
+Using all variables might seem helpful, but it can lead to overfitting, meaning the model learns not only the true patterns but also random noise in the training data. This makes the model perform poorly on new (test) data. On the other hand some variables might not truly affect ClaimAmount, and on top including correlated variables can cause instability and confusion about their effects. Choosing only the most important and independent variables helps create a simpler model that works better on unseen data.
 </p>
 </details>
 
 <details>
 <summary><em>What are residuals?</em> <span role="img" aria-label="faq"></span></summary>
 <br>
-<p>...
+<p>
+Residuals are the differences between the actual ClaimAmount and the predicted ClaimAmount from the model. A positive residual means the prediction was lower than the actual ClaimAmount (the model underestimated), while a negative residual means the prediction was higher than the actual (the model overestimated). A good model should have residuals scattered randomly around zero, meaning the predictions are close to the real values and the residuals are mostly near the zero line. This indicates the model fits the data well without systematic errors.
 </p>
 </details>
 
