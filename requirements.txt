@@ -1,7 +1,0 @@
-ipywidgets
-matplotlib
-numpy==1.26.4
-scikit-learn
-pandas<2
-statsmodels
-seaborn
