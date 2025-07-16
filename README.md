@@ -22,7 +22,7 @@ Your goal is to use your Python coding skills to:
    
 via GitHub Codespaces.
 
-The team with the best performing model will be declared the winner!
+During the challenge you can collect points, the team with the most points will be declared the winner!
 
 Together, you will find out what affects the level of car damage, how to visualize your results effectively, and learn about the work of our data scientists at AXA.
 
