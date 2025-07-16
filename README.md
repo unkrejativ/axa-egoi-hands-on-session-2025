@@ -4,7 +4,14 @@ Welcome to the Hands on Session of AXA Insurance Group at EGOI 2025.
 
 The AXA Insurance Group is one of the largest insurance companies in the world, providing several services like health insurance, car insurance and even insurances for companies to its customers.
 
-Sonja & Reja, both Data Scientist at AXA, will guide you through this Coding Challenge. ⭐
+Sonja & Reja, Data Engineer and Data Scientist at AXA, will guide you through this Coding Challenge. ⭐
+
+💼 Follow us on LinkedIn: 
+
+[🔗 Sonja ](https://www.linkedin.com/in/sonja-pins-456836b4/?originalSubdomain=de)
+
+[🔗 Reja ](https://www.linkedin.com/in/reja-ladwig-8090141a5/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=de)
+
 
 ## 📖 Overview
 In this challenge you will collaborate in teams to build a predictive model that determines how high a car damage claim will be, if it might occure.
@@ -20,6 +27,35 @@ The team with the best performing model will be declared the winner!
 Together, you will find out what affects the level of car damage, how to visualize your results effectively, and learn about the work of our data scientists at AXA.
 
 **Hints**: During the Challenge our *Modelling-Sis* <img src="images/modelling_sis.png" width="40"/> will provide some Hints for you, if needed.
+
+## Rating Procedure
+<details>
+<summary>1. Sign in to this Mentimeter poll: <span role="img" aria-label="faq"></span></summary>
+<br>
+<p>
+   <img src="images/menti.jpg" width="600"/>
+</p>
+</details>
+
+2) Count your points for section 1, send us your team number and your points on Menti.
+3) Count your points for section 2, send us your lowest MSE and the variables of the formula you used in your best model on Mentimeter.
+4) We will count all points and announce the winner. 🎉
+
+
+| Team | Points |
+|------------|-------|
+| ⭐ 1 |  |
+| 👽 2 |  |
+| 😺 3 |  |
+| ❄️ 4 |  |
+| ☀️ 5 |  |
+| 💥 6 |  |
+| 🐝 7 |  |
+| 🍀 8 |  |
+| 🌼 9 |  |
+| 🎡 10|  |
+| 🚗 11|  |
+| 🎭 12|  |
 
 
 ## 🛠️ Setting Up the Environment
@@ -98,35 +134,6 @@ Discuss with your team which features you would like to use and change or add th
 We will messure the quality of the model with the Mean Squared Error (MSE). Try to get the **least** Mean Squared Error possible!
 
 Path to the Notebook: *notebooks/2_modelling.ipynb*
-
-## Rating Procedure
-<details>
-<summary>1. Sign in to this Mentimeter poll: <span role="img" aria-label="faq"></span></summary>
-<br>
-<p>
-   <img src="images/menti.jpg" width="600"/>
-</p>
-</details>
-
-2) Count your points for section 1, send us your team number and your points on Menti.
-3) Count your points for section 2, send us your lowest MSE and the variables of the formula you used in your best model on Mentimeter.
-4) We will count all points and announce the winner. 🎉
-
-
-| Team | Points |
-|------------|-------|
-| ⭐ 1 |  |
-| 👽 2 |  |
-| 😺 3 |  |
-| ❄️ 4 |  |
-| ☀️ 5 |  |
-| 💥 6 |  |
-| 🐝 7 |  |
-| 🍀 8 |  |
-| 🌼 9 |  |
-| 🎡 10|  |
-| 🚗 11|  |
-| 🎭 12|  |
 
 ## ❓ FAQ
 <details>
