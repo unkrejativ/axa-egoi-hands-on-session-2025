@@ -6,7 +6,7 @@ The AXA Insurance Group is one of the largest insurance companies in the world, 
 
 Sonja & Reja, Data Engineer and Data Scientist at AXA, will guide you through this Coding Challenge. ⭐
 
-💼 Follow us in LinkedIn: 
+💼 Follow us on LinkedIn: 
 
 [🔗 Sonja ](https://www.linkedin.com/in/sonja-pins-456836b4/?originalSubdomain=de)
 
