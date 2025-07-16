@@ -153,6 +153,8 @@ By analyzing past data, we can see how factors like speed or vehicle power affec
 
 When we now apply the model, which has been trained on known old data, to new data, we can make predictions about the future. ✨
 
+The easist model is a simple linear regression with Y = c + a*X, where Y is the variable to predict and X is the predictor. This model has only one predictor but you can extend it to any amount of variables.
+
 In insurance, Generalized Linear Models (GLMs) are a common concept used for making predictions.</p>
 </details>
 
@@ -171,23 +173,51 @@ Mathematically, the MSE is the mean of the squared differences between the predi
 </details>
 
 <details>
+<summary><em>What function is used to train the model?</em> <span role="img" aria-label="faq"></span></summary>
+<br>
+<p> The function <em>train_evaluate_and_visualize_model</em> is used for fitting a model (estimating the coefficients of a model), visualization and capturing the created models to get an overview. 
+
+For model fitting it uses the package statsmodels and formulates a glm and fits it:
+
+model = smf.glm(formula, data=train, family=sm.families.Gamma(link=sm.families.links.Log()))
+
+results = model.fit()
+
+</p>
+</details>
+
+<details>
 <summary><em>How to read the model formula and what are non linear extensions?</em> <span role="img" aria-label="faq"></span></summary>
 <br>
-<p>...
+<p> 
+The model formula shows how the target variable (like ClaimAmount) depends on other variables (called predictors). For example, ClaimAmount ~ variable1 + variable2 means that ClaimAmount is predicted based on variable1 and variable2.
+
+In a simple linear model, we assume that the relationship between the one single predictor and ClaimAmount is a straight line: *ClaimAmount = c + a* * *variable1 + b* * *variable2*
+For example, if variable1 increases by 1 unit, ClaimAmount is expected to increase or decrease by a fixed amount (the coefficient a). This means the effect of variable1 on ClaimAmount is constant, no matter the value of variable1 or other variables.
+
+But, real-world data can be more complex, with relationships that aren't straight lines. To capture these more complicated patterns, we can extend the model in different ways:
+
+**Adding powers (like variable1^2)**: This allows the relationship to curve, so the effect of variable1 on ClaimAmount can change at different levels. This extension is useful with continuous variables (numeric data that can take any value, like age).
+
+**Using functions like np.exp() or np.log()**: log(variable1) is useful when the effect gets smaller as the value gets bigger, like with income or age. The exp (exponential) function is used when things grow very fast, like populations or money. Both are mainly used with numbers, not categories like region.
+
+**Interactions (like variable1 * variable2)**: This models the combined effect of two variables, where the effect of one variable depends on the level of another. Interactions are typically used with continuous variables, but they can also be applied to categorical variables (like region or VehBrand). For example, the effect of age (continuous) might differ depending on the VehBrand or VehPower.
 </p>
 </details>
 
 <details>
 <summary><em>Why is a model with all variables not the best?</em> <span role="img" aria-label="faq"></span></summary>
 <br>
-<p>...
+<p>
+Using all variables might seem helpful, but it can lead to overfitting, meaning the model learns not only the true patterns but also random noise in the training data. This makes the model perform poorly on new (test) data. On the other hand some variables might not truly affect ClaimAmount, and on top including correlated variables can cause instability and confusion about their effects. Choosing only the most important and independent variables helps create a simpler model that works better on unseen data.
 </p>
 </details>
 
 <details>
 <summary><em>What are residuals?</em> <span role="img" aria-label="faq"></span></summary>
 <br>
-<p>...
+<p>
+Residuals are the differences between the actual ClaimAmount and the predicted ClaimAmount from the model. A positive residual means the prediction was lower than the actual ClaimAmount (the model underestimated), while a negative residual means the prediction was higher than the actual (the model overestimated). A good model should have residuals scattered randomly around zero, meaning the predictions are close to the real values and the residuals are mostly near the zero line. This indicates the model fits the data well without systematic errors.
 </p>
 </details>
 
