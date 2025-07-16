@@ -29,6 +29,7 @@ Together, you will find out what affects the level of car damage, how to visuali
 **Hints**: During the Challenge our *Modelling-Sis* <img src="images/modelling_sis.png" width="40"/> will provide some Hints for you, if needed.
 
 ## Rating Procedure
+After we presented the results for the first section:
 <details>
 <summary>1. Sign in to this Mentimeter poll: <span role="img" aria-label="faq"></span></summary>
 <br>
