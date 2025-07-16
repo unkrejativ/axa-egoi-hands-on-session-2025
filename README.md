@@ -98,16 +98,32 @@ Now you created a new <strong>Codespace</strong> in a new Window and will see:
 <img src="images/env_3.jpg" width="600"/>
 <br>
 <br>
-Wait until the Codespace is configured, this will take around <strong>5 Minutes</strong>.
+Wait until the Codespace is configured, this will take around <strong>3 Minutes</strong>.
 
 </details>
 
 <details>
 <summary><em>4. Step: </em> <span role="img" aria-label="faq"></span></summary>
 <br>
-
-Bild wenn es fertig ist + neues Terminal?
-
+Now you should see: 
+<br>
+<br>
+<img src="images/finished_1.jpg" width="600"/>
+<br>
+<br>
+Select "Kernel auswählen". After this you should see: 
+<br>
+<br>
+<img src="images/finished_2.jpg" width="600"/>
+<br>
+<br>
+Select "Python-Umgebungen". Now you should see:
+<br>
+<br>
+<img src="images/finished_3.jpg" width="600"/>
+<br>
+<br>
+Select "Python 3.12.10". Then you are ready to go. 🎉
 </details>
 
 ## 📊 1) Data Overview and Manipulation
